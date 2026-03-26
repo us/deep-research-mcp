@@ -161,6 +161,28 @@ cd localfirecrawl
 FIRECRAWL_BASE_URL="http://localhost:3002"
 ```
 
+### Using CRW (Firecrawl-Compatible Alternative)
+
+[CRW](https://github.com/nicklitvin/crw) is an open-source, Firecrawl-compatible web scraper that works as a drop-in replacement. You can self-host it or use the hosted version at [fastcrw.com](https://fastcrw.com). No API key is required for self-hosted instances.
+
+1. **Self-hosted:** Run CRW locally (defaults to port 3002):
+```bash
+git clone https://github.com/nicklitvin/crw
+cd crw
+# Follow setup instructions in the CRW README
+```
+
+Then set in `.env.local`:
+```bash
+FIRECRAWL_BASE_URL="http://localhost:3002"
+```
+
+2. **Cloud-hosted:** Use the hosted instance at fastcrw.com:
+```bash
+FIRECRAWL_BASE_URL="https://fastcrw.com"
+FIRECRAWL_KEY="your_crw_api_key"
+```
+
 ### Optional: Observability
 
 Add observability to track research flows, queries, and results using Langfuse:
