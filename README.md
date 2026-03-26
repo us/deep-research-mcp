@@ -180,7 +180,8 @@ FIRECRAWL_BASE_URL="http://localhost:3002"
 2. **Cloud-hosted:** Use the hosted instance at fastcrw.com:
 ```bash
 FIRECRAWL_BASE_URL="https://fastcrw.com"
-FIRECRAWL_KEY="your_crw_api_key"
+# Note: FIRECRAWL_KEY is not used when FIRECRAWL_BASE_URL is set.
+# Authentication is handled by the CRW server's own key mechanism.
 ```
 
 ### Optional: Observability
